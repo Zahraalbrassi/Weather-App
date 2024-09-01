@@ -5,10 +5,10 @@ import clear_icon from '../Assets/clear.png'
 import cloud_icon from '../Assets/cloud.png'
 import drizzle_icon from '../Assets/drizzle.png'
 import rain_icon from '../Assets/rain.png'
-import humidity_icon from '../Assets/humidity.png'
+import humidity_icon from '../Assets/humid.png'
 import snow_icon from '../Assets/snow.png'
-import wind_icon from '../Assets/wind.png'
-import fav_icon from '../Assets/add.png'
+import wind_icon from '../Assets/windy.png'
+import fav_icon from '../Assets/add1.png'
 
 
 
@@ -118,10 +118,11 @@ function Weather() {
                     </div>
                 </div>
 
-                <span className='fav'>Add To Favorites</span>
-                <img src={fav_icon} onClick={saveFavoriteCity}
-                    className='fav-img'
-                />
+
+                <span onClick={saveFavoriteCity} className='fav'>Add To Favorites</span>
+
+
+
 
 
             </> : <></>}
