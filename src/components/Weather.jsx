@@ -8,6 +8,8 @@ import rain_icon from '../Assets/rain.png'
 import humidity_icon from '../Assets/humidity.png'
 import snow_icon from '../Assets/snow.png'
 import wind_icon from '../Assets/wind.png'
+import fav_icon from '../Assets/add.png'
+
 
 
 function Weather() {
@@ -115,9 +117,13 @@ function Weather() {
                         </div>
                     </div>
                 </div>
-                <button onClick={saveFavoriteCity} className="favorite-button">
-                    Favorites
-                </button>
+
+                <span className='fav'>Add To Favorites</span>
+                <img src={fav_icon} onClick={saveFavoriteCity}
+                    className='fav-img'
+                />
+
+
             </> : <></>}
             {favoriteCities.length > 0 && (
                 <div className="favorite-cities">
@@ -126,7 +132,9 @@ function Weather() {
                         {favoriteCities.map(city => (
                             <li key={city}>
                                 <span onClick={() => search(city)}>{city}</span>
-                                <button onClick={() => removeFavoriteCity(city)}>Remove</button>
+                                <button onClick={() => removeFavoriteCity(city)}  >
+                                    Remove
+                                </button>
                             </li>
                         ))}
                     </ul>

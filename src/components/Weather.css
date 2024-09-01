@@ -21,7 +21,7 @@
     border-radius: 40px;
     padding-left: 25px;
     color: #626262;
-    background: #ebfffc;
+    background: #fff;
     font-size: 18px;
 }
 
@@ -29,7 +29,7 @@
     width: 50px;
     padding: 15px;
     border-radius: 50%;
-    background: #ebfffc;
+    background: #fff;
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
 
 .temprature {
     color: #fff;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1;
 
 }
@@ -62,26 +62,35 @@
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 22px;
+    font-size: 20px;
 
 }
 
 .weather-data .col span {
     display: block;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .weather-data .col img {
-    width: 26px;
+    width: 20px;
     margin-top: 10px;
 }
 
 button {
-    border-radius: 30px;
-    color: #ebfffc;
+    background-color: #fff;
+
     color: #626262;
-    height: 40px;
-    width: 90px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 10px 10px;
+
+    font-size: 14px;
+
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .favorite-cities {
@@ -96,6 +105,22 @@ button {
 
 }
 
+
+
+.fav {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.fav-img {
+    width: 40px;
+}
+
 .favorite-cities ul li {
     list-style-type: none;
+}
+
+.favorite-cities ul li:hover {
+    text-decoration: underline;
 }
