@@ -14,7 +14,13 @@ A simple weather application built with React that allows users to search for we
 - **React**: A JavaScript library for building user interfaces.
 - **OpenWeather API**: Used to fetch current weather data for cities.
 - **CSS**: Custom styling for the app.
+## Project Structure
 
+- **src/Weather.jsx**: Contains the main logic and UI for the weather app.
+- **src/FavoriteCities.jsx**: A separate component for managing and displaying favorite cities.
+- **src/AddToFavorites.jsx**: A separate component for adding cities to the favorites list.
+- **src/Weather.css**: Contains the styling for the weather app.
+- **public/**: Contains the `index.html` and assets used in the app.
 ## Installation
 
 1. **Clone the Repository**

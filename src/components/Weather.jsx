@@ -8,7 +8,8 @@ import rain_icon from '../Assets/rain.png'
 import humidity_icon from '../Assets/humid.png'
 import snow_icon from '../Assets/snow.png'
 import wind_icon from '../Assets/windy.png'
-import fav_icon from '../Assets/add1.png'
+import FavoriteCities from './FavoriteCities'
+import AddToFavorites from './AddToFavorites'
 
 
 
@@ -68,13 +69,7 @@ function Weather() {
         }
 
     }
-    const saveFavoriteCity = () => {
-        if (weatherData && !favoriteCities.includes(weatherData.city)) {
-            const updatedFavorites = [...favoriteCities, weatherData.city];
-            setFavoriteCities(updatedFavorites);
-            localStorage.setItem('favoriteCities', JSON.stringify(updatedFavorites));
-        }
-    };
+
     const removeFavoriteCity = (cityToRemove) => {
         const updatedFavorites = favoriteCities.filter(city => city !== cityToRemove);
         setFavoriteCities(updatedFavorites);
@@ -117,29 +112,19 @@ function Weather() {
                         </div>
                     </div>
                 </div>
-
-
-                <span onClick={saveFavoriteCity} className='fav'>Add To Favorites</span>
-
-
-
-
-
+                <AddToFavorites
+                    weatherData={weatherData}
+                    favoriteCities={favoriteCities}
+                    setFavoriteCities={setFavoriteCities}
+                />
             </> : <></>}
             {favoriteCities.length > 0 && (
-                <div className="favorite-cities">
-                    <h3>Favorite Cities</h3>
-                    <ul>
-                        {favoriteCities.map(city => (
-                            <li key={city}>
-                                <span onClick={() => search(city)}>{city}</span>
-                                <button onClick={() => removeFavoriteCity(city)}  >
-                                    Remove
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <FavoriteCities
+
+                    favoriteCities={favoriteCities}
+                    search={search}
+                    removeFavoriteCity={removeFavoriteCity}
+                />
             )}
         </div>
     )
